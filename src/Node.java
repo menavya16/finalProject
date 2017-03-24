@@ -1,22 +1,22 @@
 import java.util.ArrayList;
 
 // A node of chains
-class Node<K, V1, V2>
+class Node<K, Female, Male>
 {
 	
 	//these are set to public so they can easily be accessed in the hashtable.java
 	public K key;
-	public V1 value1;
-	public V2 value2;
+	public Female femaleN;
+	public Male maleN;
 
 	// Reference to next node
-	Node<K, V1, V2> next;
+	Node<K, Female, Male> next;
 
 	// Constructor
-	public Node(K key, V1 value1, V2 value2)
+	public Node(K key, Female femaleN, Male maleN)
 	{
 		this.key = key;
-		this.value1 = value1;
-		this.value2=value2;
+		this.femaleN = femaleN;
+		this.maleN=maleN;
 	}
 }
