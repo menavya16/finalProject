@@ -74,7 +74,7 @@ class Hashtable<K> {
 			head = head.next;
 		}
 
-		return -1; // return null if the key was not found
+		return -1; // return -1 if not found
 	}
 
 	/**
@@ -94,7 +94,7 @@ class Hashtable<K> {
 			head = head.next;
 		}
 
-		return -1;
+		return -1;		//return -1 if not found
 	}
 
 	public void add(K key, int femaleN, int maleN) {
@@ -112,9 +112,9 @@ class Hashtable<K> {
 
 		size++;
 		head = arrayOfChains.get(getIndex(key));
-		Node<K> newNode = new Node<K>(key, femaleN, maleN);
-		newNode.next = head;
-		arrayOfChains.set(getIndex(key), newNode);
+		Node<K> secondNode = new Node<K>(key, femaleN, maleN);
+		secondNode.next = head;
+		arrayOfChains.set(getIndex(key), secondNode);
 
 		// If load factor goes beyond threshold, then double hash table size
 		if ((1.0 * size) / initCapacity >= 0.7) {
